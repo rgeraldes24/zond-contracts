@@ -1,0 +1,31 @@
+{
+  "name": "@theqrl/zond-contracts",
+  "description": "Secure Hyperion Smart Contract library for Zond",
+  "version": "0.1.0",
+  "files": [
+    "**/*.hyp",
+    "/build/contracts/*.json",
+    "!/mocks/**/*"
+  ],
+  "scripts": {
+    "prepack": "bash ../scripts/prepack.sh",
+    "prepare-docs": "cd ..; npm run prepare-docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theQRL/zond-contracts.git"
+  },
+  "keywords": [
+    "hyperion",
+    "zond",
+    "smart",
+    "contracts",
+    "security",
+    "qrl"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theQRL/zond-contracts/issues"
+  }
+}

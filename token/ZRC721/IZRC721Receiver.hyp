@@ -13,11 +13,11 @@ interface IZRC721Receiver {
      * @dev Whenever an {IZRC721} `tokenId` token is transferred to this contract via {IZRC721-safeTransferFrom}
      * by `operator` from `from`, this function is called.
      *
-     * It must return its Solidity selector to confirm the token transfer.
+     * It must return its Hyperion selector to confirm the token transfer.
      * If any other value is returned or the interface is not implemented by the recipient, the transfer will be
      * reverted.
      *
-     * The selector can be obtained in Solidity with `IZRC721Receiver.onZRC721Received.selector`.
+     * The selector can be obtained in Hyperion with `IZRC721Receiver.onZRC721Received.selector`.
      */
     function onZRC721Received(
         address operator,

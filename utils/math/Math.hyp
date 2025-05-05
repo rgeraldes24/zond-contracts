@@ -7,7 +7,7 @@ import {Panic} from "../Panic.hyp";
 import {SafeCast} from "./SafeCast.hyp";
 
 /**
- * @dev Standard math utilities missing in the Solidity language.
+ * @dev Standard math utilities missing in the Hyperion language.
  */
 library Math {
     enum Rounding {
@@ -137,7 +137,7 @@ library Math {
      * @dev Branchless ternary evaluation for `a ? b : c`. Gas costs are constant.
      *
      * IMPORTANT: This function may reduce bytecode size and consume less gas when used standalone.
-     * However, the compiler may optimize Solidity ternary operations (i.e. `a ? b : c`) to only compute
+     * However, the compiler may optimize Hyperion ternary operations (i.e. `a ? b : c`) to only compute
      * one branch when needed, making this function more expensive.
      */
     function ternary(bool condition, uint256 a, uint256 b) internal pure returns (uint256) {
@@ -180,7 +180,7 @@ library Math {
      */
     function ceilDiv(uint256 a, uint256 b) internal pure returns (uint256) {
         if (b == 0) {
-            // Guarantee the same behavior as in a regular Solidity division.
+            // Guarantee the same behavior as in a regular Hyperion division.
             Panic.panic(Panic.DIVISION_BY_ZERO);
         }
 
@@ -207,7 +207,7 @@ library Math {
 
             // Handle non-overflow cases, 256 by 256 division.
             if (high == 0) {
-                // Solidity will revert if denominator == 0, unlike the div opcode on its own.
+                // Hyperion will revert if denominator == 0, unlike the div opcode on its own.
                 // The surrounding unchecked block does not change this fact.
                 // See https://docs.hyperionlang.org/en/latest/control-structures.html#checked-or-unchecked-arithmetic.
                 return low / denominator;

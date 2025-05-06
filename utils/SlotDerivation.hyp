@@ -2,7 +2,7 @@
 // Zond Contracts (last updated v0.1.0) (utils/SlotDerivation.hyp)
 // This file was procedurally generated from scripts/generate/templates/SlotDerivation.js.
 
-pragma hyperion >=0.1.0;
+pragma hyperion >=0.0;
 
 /**
  * @dev Library for computing storage (and transient storage) locations from namespaces and deriving slots

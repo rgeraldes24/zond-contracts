@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 // Zond Contracts (last updated v0.1.0) (token/ZRC721/extensions/ZRC721URIStorage.sol)
 
-pragma hyperion >=0.1.0;
+pragma hyperion >=0.0;
 
 import {ZRC721} from "../ZRC721.sol";
 import {IZRC721Metadata} from "./IZRC721Metadata.sol";

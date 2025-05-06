@@ -2,7 +2,7 @@
 // Zond Contracts (last updated v0.1.0) (utils/math/SafeCast.hyp)
 // This file was procedurally generated from scripts/generate/templates/SafeCast.js.
 
-pragma hyperion >=0.1.0;
+pragma hyperion >=0.0;
 
 /**
  * @dev Wrappers over Hyperion's uintXX/intXX/bool casting operators with added overflow

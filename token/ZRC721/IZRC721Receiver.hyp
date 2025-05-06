@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 // Zond Contracts (last updated v0.1.0) (token/ZRC721/IZRC721Receiver.hyp)
 
-pragma hyperion >=0.1.0;
+pragma hyperion >=0.0;
 
 /**
  * @title ZRC-721 token receiver interface

@@ -2,7 +2,7 @@
 // Zond Contracts (last updated v0.1.0) (utils/StorageSlot.hyp)
 // This file was procedurally generated from scripts/generate/templates/StorageSlot.js.
 
-pragma hyperion >=0.1.0;
+pragma hyperion >=0.0;
 
 /**
  * @dev Library for reading and writing primitive types to specific storage slots.

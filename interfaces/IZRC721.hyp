@@ -3,4 +3,4 @@
 
 pragma hyperion >=0.0;
 
-import {IZRC721} from "../token/ZRC721/IZRC721.sol";
+import {IZRC721} from "../token/ZRC721/IZRC721.hyp";

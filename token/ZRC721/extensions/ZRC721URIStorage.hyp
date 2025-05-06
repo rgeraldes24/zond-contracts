@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
-// Zond Contracts (last updated v0.1.0) (token/ZRC721/extensions/ZRC721URIStorage.sol)
+// Zond Contracts (last updated v0.1.0) (token/ZRC721/extensions/ZRC721URIStorage.hyp)
 
 pragma hyperion >=0.0;
 
-import {ZRC721} from "../ZRC721.sol";
-import {IZRC721Metadata} from "./IZRC721Metadata.sol";
-import {Strings} from "../../../utils/Strings.sol";
-import {IZRC4906} from "../../../interfaces/IZRC4906.sol";
-import {IZRC165} from "../../../interfaces/IZRC165.sol";
+import {ZRC721} from "../ZRC721.hyp";
+import {IZRC721Metadata} from "./IZRC721Metadata.hyp";
+import {Strings} from "../../../utils/Strings.hyp";
+import {IZRC4906} from "../../../interfaces/IZRC4906.hyp";
+import {IZRC165} from "../../../interfaces/IZRC165.hyp";
 
 /**
  * @dev ZRC-721 token with storage based token URI management.

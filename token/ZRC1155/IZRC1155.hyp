@@ -48,7 +48,7 @@ interface IZRC1155 is IZRC165 {
     function balanceOf(address account, uint256 id) external view returns (uint256);
 
     /**
-     * @dev xref:ROOT:erc1155.adoc#batch-operations[Batched] version of {balanceOf}.
+     * @dev xref:ROOT:zrc1155.adoc#batch-operations[Batched] version of {balanceOf}.
      *
      * Requirements:
      *
@@ -98,7 +98,7 @@ interface IZRC1155 is IZRC165 {
     function safeTransferFrom(address from, address to, uint256 id, uint256 value, bytes calldata data) external;
 
     /**
-     * @dev xref:ROOT:erc1155.adoc#batch-operations[Batched] version of {safeTransferFrom}.
+     * @dev xref:ROOT:zrc1155.adoc#batch-operations[Batched] version of {safeTransferFrom}.
      *
      * WARNING: This function can potentially allow a reentrancy attack when transferring tokens
      * to an untrusted contract, when invoking {IZRC1155Receiver-onZRC1155BatchReceived} on the receiver.

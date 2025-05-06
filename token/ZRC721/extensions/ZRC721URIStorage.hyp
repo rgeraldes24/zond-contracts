@@ -1,0 +1,58 @@
+// SPDX-License-Identifier: MIT
+// Zond Contracts (last updated v0.1.0) (token/ZRC721/extensions/ZRC721URIStorage.sol)
+
+pragma hyperion >=0.1.0;
+
+import {ZRC721} from "../ZRC721.sol";
+import {IZRC721Metadata} from "./IZRC721Metadata.sol";
+import {Strings} from "../../../utils/Strings.sol";
+import {IZRC4906} from "../../../interfaces/IZRC4906.sol";
+import {IZRC165} from "../../../interfaces/IZRC165.sol";
+
+/**
+ * @dev ZRC-721 token with storage based token URI management.
+ */
+abstract contract ZRC721URIStorage is IZRC4906, ZRC721 {
+    using Strings for uint256;
+
+    // Interface ID as defined in ZRC-4906. This does not correspond to a traditional interface ID as ZRC-4906 only
+    // defines events and does not include any external function.
+    bytes4 private constant ZRC4906_INTERFACE_ID = bytes4(0x49064906);
+
+    // Optional mapping for token URIs
+    mapping(uint256 tokenId => string) private _tokenURIs;
+
+    /// @inheritdoc IZRC165
+    function supportsInterface(bytes4 interfaceId) public view virtual override(ZRC721, IZRC165) returns (bool) {
+        return interfaceId == ZRC4906_INTERFACE_ID || super.supportsInterface(interfaceId);
+    }
+
+    /// @inheritdoc IZRC721Metadata
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        _requireOwned(tokenId);
+
+        string memory _tokenURI = _tokenURIs[tokenId];
+        string memory base = _baseURI();
+
+        // If there is no base URI, return the token URI.
+        if (bytes(base).length == 0) {
+            return _tokenURI;
+        }
+        // If both are set, concatenate the baseURI and tokenURI (via string.concat).
+        if (bytes(_tokenURI).length > 0) {
+            return string.concat(base, _tokenURI);
+        }
+
+        return super.tokenURI(tokenId);
+    }
+
+    /**
+     * @dev Sets `_tokenURI` as the tokenURI of `tokenId`.
+     *
+     * Emits {IZRC4906-MetadataUpdate}.
+     */
+    function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal virtual {
+        _tokenURIs[tokenId] = _tokenURI;
+        emit MetadataUpdate(tokenId);
+    }
+}

@@ -7,10 +7,6 @@
     "/build/contracts/*.json",
     "!/mocks/**/*"
   ],
-  "scripts": {
-    "prepack": "bash ../scripts/prepack.sh",
-    "prepare-docs": "cd ..; npm run prepare-docs"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/theQRL/zond-contracts.git"
